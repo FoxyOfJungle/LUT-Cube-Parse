@@ -42,7 +42,7 @@ function lut_load_cube(file_name) {
 			//var _end_line_pos = string_length(_line);
 			
 			if (string_starts_with(_line, "#")) {
-				// commends [unused here]
+				// comments [unused here]
 			} else
 			if (string_starts_with(_line, "TITLE")) {
 				_lutdata.title = _line_split[1];
