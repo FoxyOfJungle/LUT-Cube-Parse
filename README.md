@@ -1,5 +1,5 @@
 # LUT-Cube-Parse
-My own GML implementation to parse a .cube LUT file for color grading.
+My own GML implementation to parse a .cube LUT file for color grading. These files can be exported from Photoshop.
 - It supports 32 bits;
 - Only tested with 3D LUTs - I will improve this function later, to support 1D LUTs and so on.
 
