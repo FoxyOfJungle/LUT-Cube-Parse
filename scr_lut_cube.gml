@@ -1,6 +1,6 @@
 
 /// @desc Load .cube file
-///
+/// Made by @foxyofjungle | https://foxyofjungle.itch.io/
 /// Returns JSON data with header and BGR colors buffer.
 ///
 /// Returns -1 if it's not a valid .cube file.
