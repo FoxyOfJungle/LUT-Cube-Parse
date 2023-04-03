@@ -3,7 +3,7 @@
 /// Made by @foxyofjungle | https://foxyofjungle.itch.io/
 /// Returns JSON data with header and BGR colors buffer.
 ///
-/// Returns -1 if it's not a valid .cube file.
+/// Returns -2 if it's not a valid .cube file. -1 if file not found or failed.
 /// @param {String} file_name The LUT .cube file
 function lut_load_cube(file_name) {
 	if (file_exists(file_name)) {
@@ -28,7 +28,7 @@ function lut_load_cube(file_name) {
 		// header positions
 		// all before TITLE are comments
 		var _hp_title = string_pos("TITLE", _text);
-		if (_hp_title <= 0) return -1;
+		if (_hp_title <= 0) return -2;
 		if (_hp_title > 1) {
 			_lutdata.comments = string_split( string_copy(_text, 1, _hp_title-1) , "#", true);
 		}
@@ -77,5 +77,5 @@ function lut_load_cube(file_name) {
 		// return
 		return _lutdata;
 	}
-	return undefined;
+	return -1;
 }
