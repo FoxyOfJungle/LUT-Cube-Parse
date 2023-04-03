@@ -6,12 +6,6 @@
 /// Returns -1 if it's not a valid .cube file.
 /// @param {String} file_name The LUT .cube file
 function lut_load_cube(file_name) {
-	/*
-		Returns:
-		* surface: 32 bits
-		* undefined: file not exists
-		* -1: invalid cube file
-	*/
 	if (file_exists(file_name)) {
 		// load file
 		var _buff = buffer_load(file_name);
